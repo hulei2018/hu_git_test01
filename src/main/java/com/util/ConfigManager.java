@@ -37,18 +37,7 @@ public class ConfigManager {
         }
     }
 
-    //返回Integer类型
-    public static Integer getIntegerProperties(String key){
-        String prop= getProperties(key);
-        try {
-            return Integer.valueOf(prop);
-        } catch (NumberFormatException e) {
-            e.printStackTrace();
-        }finally {
-            return 0;
-        }
 
-    }
 
     public static void main(String[] args) {
         System.out.println(getBooleanProperties(Constants.IS_LOCAL));
